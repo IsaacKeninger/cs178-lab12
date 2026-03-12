@@ -34,7 +34,7 @@ def analyze(word):
 
     # count vowels
     word = word.lower()
-    vowels = ['a', 'e', 'i', 'o', 'u']
+    vowels = ['a', 'e', 'i', 'o', 'u','y']
     num_vowels = 0
 
     for char in word:
