@@ -30,8 +30,20 @@ def hello(name):
 # ============================================================
 @app.route('/analyze/<word>')
 def analyze(word):
-    return str(len(word))
+    char_num = len(word)
 
+    # count vowels
+    word = word.lower()
+    vowels = ['a', 'e', 'i', 'o', 'u']
+    num_vowels = 0
+
+    for char in word:
+        if char in vowels:
+            num_vowels += 1
+
+    return render_template('analyze.html', 
+                           char_num=char_num, 
+                           num_vowels=num_vowels)
 
 # ============================================================
 #  These two lines always stay at the bottom of the file.
