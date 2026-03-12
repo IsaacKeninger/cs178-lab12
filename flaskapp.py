@@ -41,9 +41,13 @@ def analyze(word):
         if char in vowels:
             num_vowels += 1
 
+    # reverse word
+    reversed_word = word[::-1]
+
     return render_template('analyze.html', 
                            char_num=char_num, 
-                           num_vowels=num_vowels)
+                           num_vowels=num_vowels,
+                           reversed_word=reversed_word)
 
 # ============================================================
 #  These two lines always stay at the bottom of the file.
